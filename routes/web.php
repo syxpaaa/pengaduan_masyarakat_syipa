@@ -30,3 +30,4 @@ Route::get('masyarakat/laporan',[MasyarakatController::class,'laporan']);
 Route::post('masyarakat/laporan',[MasyarakatController::class,'cekLaporan']);
 
 Route::get('masyarakat/dasbor',[Masyarakatcontroller::class,'dasbor']);
+Route::get('/');

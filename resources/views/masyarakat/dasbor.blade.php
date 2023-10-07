@@ -34,18 +34,12 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link" href="#">Dropdown</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            <a class="nav-link active" href="#">pengaduan</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-light" type="submit">login</button>
+          <button class="btn btn-outline-light" type="submit">login </button>
           <button class="btn btn-outline-light" type="submit">daftar</button>
         </form>
       </div>
