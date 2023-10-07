@@ -32,7 +32,7 @@
         <div class="card shadow mt-4">
             <div class="card-header d-flex text-bg-primary bg-gradient justify-content-between">
                 <h4 class="card-title">Laporankan laporan anda</h4>
-                <a href="{{url('masyarakat/laporan')}}" >
+                <a href="{{url('masyarakat/simpan')}}" method="post" >
                 </a>
             </div>
             <div class="card-body">

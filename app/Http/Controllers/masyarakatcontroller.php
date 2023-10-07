@@ -48,4 +48,7 @@ class masyarakatcontroller extends Controller
     public function laporan(){
         return view('masyarakat.laporan');
     }
+    public function dasbor(){
+        return view('masyarakat.dasbor');
+    }
 }
