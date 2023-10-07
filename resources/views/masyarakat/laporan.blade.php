@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
 <body class="bg-body-secondary">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg  navbar-dark bg-info">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">PPM</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +30,7 @@
       </nav>
     <div class="container">
         <div class="card shadow mt-4">
-            <div class="card-header d-flex text-bg-primary bg-gradient justify-content-between">
+            <div class="card-header d-flex text-bg-info bg-gradient justify-content-between">
                 <h4 class="card-title">Laporankan laporan anda</h4>
                 <a href="{{url('masyarakat/simpan')}}" method="post" >
                 </a>
@@ -68,7 +68,7 @@
                         </div>
                     </div>
                     <div class="d-grid gap-2 col-6 mx-auto">
-                        <button class="btn btn-primary" type="button">Laporkan</button>
+                        <button class="btn btn-info" type="button">Laporkan</button>
                       </div>
                 </form>
             </div>

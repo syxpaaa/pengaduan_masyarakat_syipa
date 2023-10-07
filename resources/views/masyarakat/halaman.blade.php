@@ -38,7 +38,7 @@
           </li>
         </ul>
         <form class="d-flex" role="search">
-          <button class="btn btn-outline-light" type="submit">login </button>
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-light" type="submit">daftar</button>
         </form>
       </div>
@@ -76,7 +76,7 @@
   <div class="container">
     <div class="card shadow mt-4">
         <div class="bg-gradient justify-content-between">
-            <a href="{{url('masyarakat/laporan')}}" >
+            <a href="{{url('masyarakat/halaman')}}" >
             </a>
         </div>
         <div class="card-body">
@@ -88,8 +88,10 @@
             <form action="" method="post">
                 @csrf
                 
-                <h1>Layanan Aspirasi dan Pengaduan Online Rakyat</h1>
-                <h4>Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang</h4>
+                <h1>Selamat Datang</h1>
+                <h4>silahkan Laporankan laporan anda 
+                <button class="btn btn-outline-info" type="submit">login </button>
+            </h4>
             </form>
         </div>
     </div>
