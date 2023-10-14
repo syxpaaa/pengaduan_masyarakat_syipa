@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class masyarakatcontroller extends Controller
 {
+    public function index(){
+        return view('masyarakat.dasbor');
+    }
+
     public function registrasi(){
         return view('masyarakat.registrasi');
     }
@@ -48,7 +52,8 @@ class masyarakatcontroller extends Controller
     public function laporan(){
         return view('masyarakat.laporan');
     }
-    public function dasbor(){
-        return view('masyarakat.dasbor');
+
+    public function pengaduan(){
+        return view('masyarakat.pengaduan');
     }
 }

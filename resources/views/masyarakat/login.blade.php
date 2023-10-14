@@ -13,7 +13,7 @@
             <div class="card shadow m-auto" style="width: 400px;">
                 <div class="card-body">
                     
-                    <h4 class="h4">wellcome kakak</h4>
+                    <h4 class="h4">wellcome</h4>
                     @if (session('pesan'))
                     <div class="alert alert-primary" role="alert">
                         {{session('pesan')}}
