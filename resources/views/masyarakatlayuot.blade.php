@@ -10,7 +10,6 @@
 <body class="bg-body-secondary">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -26,8 +25,10 @@
                 <a class="nav-link" href="{{url('laporan')}}">Laporan</a>
               </li>
             </ul>
-              <a href="{{url('login')}}" class="btn btn-info">Login</a>
-              <a href="{{url('registrasi')}}" class="btn btn-info mx-3">Register</a>
+            <a href="/admin/logout" class="btn btn-info">
+              Sign Out
+              <i class="bi bi-box-arrow-right"></i>
+          </a>
           </div>
         </div>
       </nav>

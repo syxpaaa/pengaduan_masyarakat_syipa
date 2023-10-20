@@ -8,9 +8,15 @@
   <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
 <style>
-  h1{
-    font-size: 40px;
-    padding: 100px 0 10px 0;
+   h1{
+    font-size: 70px;
+    padding: 90px 0 10px 0;
+    justify-content: center;
+    display: flex;
+  }
+  h3{
+    font-size: 30px;
+    padding: 50px 0 10px 0;
     justify-content: center;
     display: flex;
   }
@@ -18,13 +24,12 @@
     font-size: 20px;
         display: flex;
         justify-content: center;
-        padding: 20px 0 80px 0;
+        padding: 5px 0 60px 0;
   }
 </style>
 <body>
   <nav class="navbar navbar-expand-lg  navbar-dark bg-info">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -33,14 +38,9 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">pengaduan</a>
-          </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-light" type="submit">daftar</button>
-        </form>
+        <a href="{{url('login')}}" class="btn btn-light">Login</a>
+        <a href="{{url('registrasi')}}" class="btn btn-light mx-3">Register</a>
       </div>
     </div>
     <body class="bg-body-secondary"> 
@@ -75,6 +75,7 @@
   </div> 
   <div class="container">
     <div class="card shadow mt-4">
+      
         <div class="bg-gradient justify-content-between">
             <a href="{{url('masyarakat/halaman')}}" >
             </a>
@@ -85,14 +86,11 @@
                     {{session('pesan')}}
                   </div>
                 @endif
-            <form action="" method="post">
+            
                 @csrf
-                
-                <h1>Selamat Datang</h1>
-                <h4>silahkan Laporankan laporan anda 
-                <button class="btn btn-outline-info" type="submit">login </button>
-            </h4>
-            </form>
+                <h1>SELAMAT DATANG!!</h1>
+                <h3>Layanan Aspirasi dan Pengaduan Online Rakyat</h3>
+                <h4>Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang</h4>
         </div>
     </div>
 </div>

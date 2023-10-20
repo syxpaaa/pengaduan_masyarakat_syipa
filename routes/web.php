@@ -20,12 +20,16 @@ use Illuminate\Support\Facades\Route;
 
 
 //data masyarakat
-Route::get('masyarakat',[Masyarakatcontroller::class,'index']);
-Route::get('masyarakat/registrasi',[Masyarakatcontroller::class,'registrasi']);
-Route::post('masyarakat/simpan',[masyarakatcontroller::class,'simpan']);
-Route::get('masyarakat/login',[masyarakatcontroller::class,'login']);
-Route::post('masyarakat/login',[masyarakatcontroller::class,'ceklogin']);
-Route::get('masyarakat/laporan',[MasyarakatController::class,'laporan']);
-Route::post('masyarakat/laporan',[MasyarakatController::class,'cekLaporan']);
+Route::get('/',[Masyarakatcontroller::class,'index']);
+Route::get('registrasi',[Masyarakatcontroller::class,'registrasi']);
+Route::post('simpan',[masyarakatcontroller::class,'simpan']);
+Route::get('login',[masyarakatcontroller::class,'login']);
+Route::post('login',[masyarakatcontroller::class,'ceklogin']);
+Route::get('laporan',[MasyarakatController::class,'laporan']);
+Route::post('laporan',[MasyarakatController::class,'cekLaporan']);
+Route::get('pengaduan',[masyarakatcontroller::class,'pengaduan']);
+Route::get('halaman',[masyarakatcontroller::class,'halaman']);
 
-Route::get('masyarakat/dasbor',[Masyarakatcontroller::class,'dasbor']);
+
+//data petugas
+Route::get('petugas',[PetugasController::class,'index']);

@@ -60,4 +60,8 @@ class masyarakatcontroller extends Controller
     public function halaman(){
         return view('masyarakat/halaman');
     }
+    public function logout(){
+        session()->flush();
+        return back();
+    }
 }

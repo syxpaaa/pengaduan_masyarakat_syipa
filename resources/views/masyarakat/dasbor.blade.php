@@ -2,17 +2,20 @@
 
 @section('css')
     <style>
+      
     </style>
 @endsection
 
 @section('konten')
 <div class="card shadow mt-5">
   <div class="card-body text-center">
-          <h1>Layanan Aspirasi dan Pengaduan Online Rakyat</h1>
-          <h4>Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang</h4>
+          <h1>SELAMAT DATANG!!</h1>
+          <h3>SILAHKAN AJUKAN PENGADUAN ANDA</h3>
+            <button class="btn btn-outline-info" href="{{url('pengaduan')}}">AJUKAN</button>
   </div>
 </div>
 @endsection
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,92 +28,21 @@
 </head>
 <style>
   h1{
-    font-size: 40px;
-    padding: 100px 0 10px 0;
+    font-size: 70px;
+    padding: 90px 0 10px 0;
     justify-content: center;
     display: flex;
   }
-  h4{
-    font-size: 20px;
-        display: flex;
-        justify-content: center;
-        padding: 20px 0 80px 0;
+  h3{
+    font-size: 30px;
+    padding: 50px 0 10px 0;
+    justify-content: center;
+    display: flex;
+  }
+  button{
+    margin: auto;
   }
 </style>
-<body>
-  <nav class="navbar navbar-expand-lg  navbar-dark bg-info">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">pengaduan</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <button class="btn btn-outline-light" type="submit">login </button>
-          <button class="btn btn-outline-light" type="submit">daftar</button>
-        </form>
-      </div>
-    </div>
-    <body class="bg-body-secondary"> 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <body class="bg-body-secondary"> 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-      </ul>
-    </div>
-  </div>
-</nav>
-  </nav>
-  <body class="bg-body-secondary"> 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-      </ul>
-    </div>
-  </div> 
-  <div class="container">
-    <div class="card shadow mt-4">
-        <div class="bg-gradient justify-content-between">
-            <a href="{{url('masyarakat/laporan')}}" >
-            </a>
-        </div>
-        <div class="card-body">
-            @if (session('pesan'))
-                <div class="alert alert-danger" role="alert">
-                    {{session('pesan')}}
-                  </div>
-                @endif
-            <form action="" method="post">
-                @csrf
-                
-                <h1>Layanan Aspirasi dan Pengaduan Online Rakyat</h1>
-                <h4>Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang</h4>
-            </form>
-        </div>
-    </div>
-</div>
-
-</nav>
+  
 </body>
 </html>
