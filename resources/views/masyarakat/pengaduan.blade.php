@@ -19,7 +19,7 @@
                   </div>
                 @endif
 
-                <form action="{{url('masyarakat/login')}}" method="post">
+                <form action="{{url('simpan')}}" method="post">
                     @csrf
                     <div class="mb-3">
                         <label for="tanggalpengaduan" class="form-label">Tanggal pengaduan</label>

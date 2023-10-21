@@ -25,16 +25,11 @@ class masyarakatcontroller extends Controller
             'password'=>'required|min:4',
             'telp'=>'required|max:13'
         ]);
-        // $aziz->create([
-        // 'nik'=>$request->nik,
-        // 'nama'=>$request->nama,
-        // 'username'=>$request->username,
-        // 'password'=>$request->password,
-        // 'telp'=>$request->telp,
-        // ]);
-       
-        //return redirect('masyarakat/registrasi')->with('info','Anda berhasil Registrasi');
-        return back()->with('pesan','registrasi berhasil kakak');
+        $aziz->create($request->all());
+        if ($aziz->where('nik',$request->input('nik'))->where('username',$request->input('username'))->exists()){
+            return redirect('dasbor');
+        }
+        return back()->with('pesan','registrasi gagal kakak');
     }
 
     public function login(){
@@ -45,7 +40,7 @@ class masyarakatcontroller extends Controller
         $aziz = new Masyarakat();
         //cek username dan password exists(ada)di tabel masyarakat
         if ($aziz->where('username',$request->input)->where('password',$request->input)->exists()) {
-            return redirect('/');
+            return redirect('dasbor');
         }
         return back()->with('pesan','username dan password belum terdaftar kakak');
     }
@@ -58,7 +53,7 @@ class masyarakatcontroller extends Controller
     }
 
     public function halaman(){
-        return view('masyarakat/halaman');
+        return view('masyarakat.halaman');
     }
     public function logout(){
         session()->flush();

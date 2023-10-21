@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 
 //data masyarakat
-Route::get('/',[Masyarakatcontroller::class,'index']);
+Route::get('dasbor',[Masyarakatcontroller::class,'index']);
 Route::get('registrasi',[Masyarakatcontroller::class,'registrasi']);
 Route::post('simpan',[masyarakatcontroller::class,'simpan']);
 Route::get('login',[masyarakatcontroller::class,'login']);
@@ -28,7 +28,7 @@ Route::post('login',[masyarakatcontroller::class,'ceklogin']);
 Route::get('laporan',[MasyarakatController::class,'laporan']);
 Route::post('laporan',[MasyarakatController::class,'cekLaporan']);
 Route::get('pengaduan',[masyarakatcontroller::class,'pengaduan']);
-Route::get('halaman',[masyarakatcontroller::class,'halaman']);
+Route::get('/',[masyarakatcontroller::class,'halaman']);
 
 
 //data petugas

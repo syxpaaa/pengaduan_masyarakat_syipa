@@ -11,7 +11,7 @@
   <div class="card-body text-center">
           <h1>SELAMAT DATANG!!</h1>
           <h3>SILAHKAN AJUKAN PENGADUAN ANDA</h3>
-            <button class="btn btn-outline-info" href="{{url('pengaduan')}}">AJUKAN</button>
+          <button type="button" class="btn btn-outline-info me-2" href="{{url('pengaduan')}}">Tulis Ajuan</button>
   </div>
 </div>
 @endsection
