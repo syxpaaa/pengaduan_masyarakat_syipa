@@ -33,3 +33,12 @@ Route::get('/',[masyarakatcontroller::class,'halaman']);
 
 //data petugas
 Route::get('petugas',[PetugasController::class,'index']);
+
+Route::prefix('admin')->group(function(){
+    Route::get('/',function(){
+        return view('Administrator.index');
+    })->middleware(ValidasaAdmin::class);
+    Route::get('login',[AdminController::class,'login']);
+    Route::post('login',[AdminController::class,'ceklogin']);
+    Route::get('logout',[AdminController::class,'logout']);
+});

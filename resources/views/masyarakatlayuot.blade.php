@@ -25,7 +25,7 @@
                 <a class="nav-link" href="{{url('laporan')}}">Laporan</a>
               </li>
             </ul>
-            <a href="/admin/logout" class="btn btn-info">
+            <a href="/masyarakat/logout" class="btn btn-info">
               Sign Out
               <i class="bi bi-box-arrow-right"></i>
           </a>
