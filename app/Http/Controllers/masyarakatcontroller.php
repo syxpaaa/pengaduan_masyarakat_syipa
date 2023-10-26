@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Masyarakat;
+use App\Models\pengaduan;
 use Illuminate\Http\Request;
 
 class masyarakatcontroller extends Controller
@@ -27,7 +28,7 @@ class masyarakatcontroller extends Controller
         ]);
         $aziz->create($request->all());
         if ($aziz->where('nik',$request->input('nik'))->where('username',$request->input('username'))->exists()){
-            return redirect('dasbor');
+            return redirect('dasbor')->with('pesan','login berhasil');
         }
         return back()->with('pesan','registrasi gagal kakak');
     }
@@ -40,9 +41,10 @@ class masyarakatcontroller extends Controller
         $aziz = new Masyarakat();
         //cek username dan password exists(ada)di tabel masyarakat
         if ($aziz->where('username',$request->input)->where('password',$request->input)->exists()) {
-            return redirect('dasbor');
+            return redirect('dasbor')->with('pesan','login berhasil');
         }
         return back()->with('pesan','username dan password belum terdaftar kakak');
+
     }
     public function laporan(){
         return view('masyarakat.laporan');
@@ -50,6 +52,24 @@ class masyarakatcontroller extends Controller
 
     public function pengaduan(){
         return view('masyarakat.pengaduan');
+    }
+
+    public function cekpengaduan(Request $request){
+        $cek = $request->validate([
+            'nik'=> 'required| max:16',
+            'tgl_pengaduan'=> 'required',
+            'foto'=> 'required',
+            'isi_laporan'=>'required'
+        ]);
+       // siapkan variabel untuk menampung file
+       $foto = $request->file('foto');
+       // tetntukan path file akan di simpan
+       $folder = 'upload_data';
+       // pindahkan file ke target folder
+       $foto->move($folder, $foto->getClientOriginalName());
+       
+       return back()->with('pesan','username dan password belum terdaftar kakak');
+       
     }
 
     public function halaman(){

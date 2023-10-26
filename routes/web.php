@@ -25,20 +25,14 @@ Route::get('registrasi',[Masyarakatcontroller::class,'registrasi']);
 Route::post('simpan',[masyarakatcontroller::class,'simpan']);
 Route::get('login',[masyarakatcontroller::class,'login']);
 Route::post('login',[masyarakatcontroller::class,'ceklogin']);
-Route::get('laporan',[MasyarakatController::class,'laporan']);
-Route::post('laporan',[MasyarakatController::class,'cekLaporan']);
+//Route::get('laporan',[MasyarakatController::class,'laporan']);
+//Route::post('laporan',[MasyarakatController::class,'cekLaporan']);
 Route::get('pengaduan',[masyarakatcontroller::class,'pengaduan']);
+Route::post('pengaduan',[masyarakatcontroller::class,'cekpengaduan']);
 Route::get('/',[masyarakatcontroller::class,'halaman']);
 
 
 //data petugas
 Route::get('petugas',[PetugasController::class,'index']);
 
-Route::prefix('admin')->group(function(){
-    Route::get('/',function(){
-        return view('Administrator.index');
-    })->middleware(ValidasaAdmin::class);
-    Route::get('login',[AdminController::class,'login']);
-    Route::post('login',[AdminController::class,'ceklogin']);
-    Route::get('logout',[AdminController::class,'logout']);
-});
+Route::get('home',[PetugasController::class,'home']);

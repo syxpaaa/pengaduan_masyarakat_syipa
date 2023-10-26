@@ -15,15 +15,15 @@
                   {{--pesan jika validasi gagal--}}
                 @if ($errors->any())
                 <div class="alert alert-primary" role="alert">
-                    Gagal login
+                    Isi Semua Kolom
                   </div>
                 @endif
 
-                <form action="{{url('simpan')}}" method="post">
+                <form action="{{url('pengaduan')}}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
-                        <label for="tanggalpengaduan" class="form-label">Tanggal pengaduan</label>
-                        <input type="date" class="form-control" name="tanggalpengaduan" id="tanggalpengaduan
+                        <label for="tgl_pengaduan" class="form-label">Tanggal pengaduan</label>
+                        <input type="date" class="form-control" name="tgl_pengaduan" id="tgl_pengaduan
                         " placeholder="Tanggal pengaduan">
                         @error('Tanggal pengaduan')
                             <div class="form-text">
@@ -41,8 +41,8 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="isilaporan" class="form-label">Isi Laporan</label>
-                        <textarea class="form-control" name="isilaporan" id="isilaporan" placeholder="Isi Laporan" rows="3"></textarea>
+                        <label for="isi_laporan" class="form-label">Isi Laporan</label>
+                        <textarea class="form-control" name="isi_laporan" id="isilaporan" placeholder="Isi_Laporan" rows="3"></textarea>
                         @error('Isi Laporan')
                             <div class="form-text">
                                 {{$message}}
@@ -59,16 +59,7 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="status" class="form-label">Status</label>
-                        <input type="text" class="form-control" name="status" id="status" placeholder="Status">
-                        @error('status')
-                            <div class="form-text">
-                                {{$message}}
-                            </div>
-                        @enderror
-                    </div>
-                    <div class="mb-3">
-                        <button class="btn form-control btn-primary mb-2">Laporkan</button>
+                        <button class="btn form-control btn-outline-info mb-2" type="submit">kirim</button>
                         <button class="btn form-control btn-outline-success mb-2" type="reset">Batal</button>
                     </div>
                 </form>

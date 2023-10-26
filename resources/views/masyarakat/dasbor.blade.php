@@ -11,7 +11,7 @@
   <div class="card-body text-center">
           <h1>SELAMAT DATANG!!</h1>
           <h3>SILAHKAN AJUKAN PENGADUAN ANDA</h3>
-          <a href=""></a>
+          <a href="{{url('pengaduan')}}" class="btn btn-outline-info">Tulis Pengaduan</a>
   </div>
 </div>
 @endsection

@@ -1,4 +1,4 @@
-@extends('Layout')
+@extends('petugasLayot')
 
 @section('title', 'Dashboard Admin')
 

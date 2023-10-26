@@ -7,6 +7,7 @@
     <title>@yield('title') | Pengaduan</title>
     <link rel="stylesheet" href="\css\bootstrap.min.css">
     <link rel="stylesheet" href="\css\bootstrap-icons.css">
+    <link rel="stylesheet" href="/layout/css/style.css">
     
 </head>
 <body>
@@ -17,18 +18,30 @@
       </button>
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header" style="background-color: #abd9fa;">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Lapor!!</h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{{url('pengaduan')}}">pangaduan</a>
+              <a class="nav-link active" aria-current="page" href="">Dashboard</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+                <a class="nav-link active" aria-current="page" href="">Pengguna</a>
             </li>
           </ul>
+          <li class="nav-item mb-1">
+            <a href="#" class="nav-link ">
+                <i class="bi bi-file-earmark-text-fill"></i>
+                Aduan Masuk
+            </a>
+        </li>
+        <li class="nav-item mb-1">
+            <a href="#" class="nav-link ">
+                <i class="bi bi-file-earmark-text-fill"></i>
+                Data Masuk
+            </a>
+        </li>
           <form class="d-flex mt-3" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
@@ -40,8 +53,15 @@
               <input type="search" class="form-control form-control-dark text-bg-light" placeholder="Search..." aria-label="Search">
             </form>
             <div class="text-end">
-              <button type="button" class="btn btn-light me-2">Login</button>
-              <button type="button" class="btn btn-light me-2">Sign-up</button>
+                
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="/admin/logout" class="btn btn-danger">
+                            Sign Out
+                            <i class="bi bi-box-arrow-right"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
           </div>
         </div>

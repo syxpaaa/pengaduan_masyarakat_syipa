@@ -22,7 +22,7 @@
                     {{-- pesan jika validasi gagal --}}
                     @if ($errors->any())
                     <div class="alert alert-success" role="alert">
-                        Gagal registrasi
+                        Gagal login
                       </div>
                     @endif
 
