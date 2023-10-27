@@ -57,7 +57,7 @@ class masyarakatcontroller extends Controller
     public function cekpengaduan(Request $request){
         $cek = $request->validate([
             'nik'=> 'required| max:16',
-            'tgl_pengaduan'=> 'required',
+            'tgl_pengaduan'=> 'required|date',
             'foto'=> 'required',
             'isi_laporan'=>'required'
         ]);
@@ -67,8 +67,16 @@ class masyarakatcontroller extends Controller
        $folder = 'upload_data';
        // pindahkan file ke target folder
        $foto->move($folder, $foto->getClientOriginalName());
+
+        $s = new pengaduan();
+        $s->create([
+            'nik'=>$request->nik,
+            'tgl_pengaduan'=> $request->tgl_pengaduan,
+            'foto'=>$request->foto,
+            'isi_laporan'=>$request->isi_laporan
+        ]);
        
-       return back()->with('pesan','username dan password belum terdaftar kakak');
+       return redirect('dasbor')->with('pesan','pengaduan berhasil di kirim');
        
     }
 

@@ -20,6 +20,7 @@
                 @endif
 
                 <form action="{{url('pengaduan')}}" method="post" enctype="multipart/form-data">
+                    <form action="{{url('simpan')}}" method="post">
                     @csrf
                     <div class="mb-3">
                         <label for="tgl_pengaduan" class="form-label">Tanggal pengaduan</label>
