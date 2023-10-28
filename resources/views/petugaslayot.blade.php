@@ -7,7 +7,7 @@
     <title>@yield('title') | Pengaduan</title>
     <link rel="stylesheet" href="\css\bootstrap.min.css">
     <link rel="stylesheet" href="\css\bootstrap-icons.css">
-    <link rel="stylesheet" href="/layout/css/style.css">
+    <link rel="stylesheet" href="\layout\css\style.css">
     
 </head>
 <body>
@@ -24,24 +24,19 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="">Dashboard</a>
+              <a class="nav-link active" aria-current="page" href="{{url('petugas')}}">Dashboard</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="">Pengguna</a>
+                <a class="nav-link active" aria-current="page" href="{{url('validasi')}}">validasi</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{url('tanggapan')}}">Tanggapan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="">validasi</a>
+        </li>
           </ul>
-          <li class="nav-item mb-1">
-            <a href="#" class="nav-link ">
-                <i class="bi bi-file-earmark-text-fill"></i>
-                Aduan Masuk
-            </a>
-        </li>
-        <li class="nav-item mb-1">
-            <a href="#" class="nav-link ">
-                <i class="bi bi-file-earmark-text-fill"></i>
-                Data Masuk
-            </a>
-        </li>
+          
           <form class="d-flex mt-3" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>

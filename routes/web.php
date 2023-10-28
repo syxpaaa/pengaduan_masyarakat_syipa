@@ -36,3 +36,11 @@ Route::get('/',[masyarakatcontroller::class,'halaman']);
 Route::get('petugas',[PetugasController::class,'index']);
 
 Route::get('home',[PetugasController::class,'home']);
+Route::get('validasi',[PetugasController::class,'validasi']);
+Route::post('validasi',[PetugasController::class,'cekvalidasi']);
+
+//admin
+Route::get('admin',[PetugasController::class,'admin']);
+Route::post('.login',[PetugasController::class,'ceklogin']);
+Route::get('register',[PetugasController::class,'register']);
+Route::post('simpen',[PetugasController::class,'simpen']);

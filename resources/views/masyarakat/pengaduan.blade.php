@@ -59,6 +59,7 @@
                             </div>
                         @enderror
                     </div>
+                    
                     <div class="mb-3">
                         <button class="btn form-control btn-outline-info mb-2" type="submit">kirim</button>
                         <button class="btn form-control btn-outline-success mb-2" type="reset">Batal</button>

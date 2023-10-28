@@ -59,7 +59,8 @@ class masyarakatcontroller extends Controller
             'nik'=> 'required| max:16',
             'tgl_pengaduan'=> 'required|date',
             'foto'=> 'required',
-            'isi_laporan'=>'required'
+            'isi_laporan'=>'required',
+            'status'=>'0'
         ]);
        // siapkan variabel untuk menampung file
        $foto = $request->file('foto');
@@ -68,13 +69,8 @@ class masyarakatcontroller extends Controller
        // pindahkan file ke target folder
        $foto->move($folder, $foto->getClientOriginalName());
 
-        $s = new pengaduan();
-        $s->create([
-            'nik'=>$request->nik,
-            'tgl_pengaduan'=> $request->tgl_pengaduan,
-            'foto'=>$request->foto,
-            'isi_laporan'=>$request->isi_laporan
-        ]);
+        $aziz = new pengaduan();
+        $aziz->create($request->all());
        
        return redirect('dasbor')->with('pesan','pengaduan berhasil di kirim');
        
