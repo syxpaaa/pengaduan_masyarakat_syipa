@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class masyarakatcontroller extends Controller
 {
     public function index(){
-        return view('masyarakat.dasbor');
+        return view('masyarakat.halaman');
     }
 
     public function registrasi(){
@@ -40,14 +40,16 @@ class masyarakatcontroller extends Controller
     public function ceklogin(Request $request){
         $aziz = new Masyarakat();
         //cek username dan password exists(ada)di tabel masyarakat
-        if ($aziz->where('username',$request->input)->where('password',$request->input)->exists()) {
-            return redirect('dasbor')->with('pesan','login berhasil');
+        if ($aziz->where('username',$request->input('username'))->where('password',$request->input('password'))->exists()) {
+            session(['username'=>$request->input('username')]);
+            return redirect('/');
         }
         return back()->with('pesan','username dan password belum terdaftar kakak');
 
     }
     public function laporan(){
-        return view('masyarakat.laporan');
+        $p = new Masyarakat();
+        return view('masyarakat.laporan',['data'=>$p->all()]);
     }
 
     public function pengaduan(){
@@ -76,9 +78,6 @@ class masyarakatcontroller extends Controller
        
     }
 
-    public function halaman(){
-        return view('masyarakat.halaman');
-    }
     public function logout(){
         session()->flush();
         return back();

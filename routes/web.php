@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\masyarakatcontroller;
 use App\Http\Controllers\PetugasController;
+use App\Http\Middleware\validasiMasyarakat;
 use App\Models\Masyarakat;
 use Illuminate\Support\Facades\Route;
 
@@ -20,21 +21,21 @@ use Illuminate\Support\Facades\Route;
 
 
 //data masyarakat
-Route::get('dasbor',[Masyarakatcontroller::class,'index']);
+Route::get('/',[Masyarakatcontroller::class,'index']);
+Route::get('pengaduan',[masyarakatcontroller::class,'pengaduan'])->middleware(validasiMasyarakat::class);
+Route::post('pengaduan',[masyarakatcontroller::class,'cekpengaduan']);
+Route::get('laporan',[Masyarakatcontroller::class,'laporan']);
 Route::get('registrasi',[Masyarakatcontroller::class,'registrasi']);
 Route::post('simpan',[masyarakatcontroller::class,'simpan']);
 Route::get('login',[masyarakatcontroller::class,'login']);
 Route::post('login',[masyarakatcontroller::class,'ceklogin']);
-//Route::get('laporan',[MasyarakatController::class,'laporan']);
-//Route::post('laporan',[MasyarakatController::class,'cekLaporan']);
-Route::get('pengaduan',[masyarakatcontroller::class,'pengaduan']);
-Route::post('pengaduan',[masyarakatcontroller::class,'cekpengaduan']);
-Route::get('/',[masyarakatcontroller::class,'halaman']);
+Route::get('logot',[masyarakatcontroller::class,'logout']);
+
+
 
 
 //data petugas
 Route::get('petugas',[PetugasController::class,'index']);
-
 Route::get('home',[PetugasController::class,'home']);
 Route::get('validasi',[PetugasController::class,'validasi']);
 Route::post('validasi',[PetugasController::class,'cekvalidasi']);
