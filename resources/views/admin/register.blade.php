@@ -34,11 +34,11 @@
                       </div>
                     @endif
 
-                    <form action="{{url('simpen')}}" method="post">
+                    <form action="{{url('register')}}" method="post">
                         @csrf
                         <div class="mb-3">
                             <label for="nama" class="form-label">Nama</label>
-                            <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Lengkap">
+                            <input type="text" class="form-control" name="nama_petugas" id="nama" placeholder="Nama Lengkap">
                             @error('nama')
                                 <div class="form-text">
                                     {{$message}}

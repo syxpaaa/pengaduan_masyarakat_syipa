@@ -33,7 +33,7 @@
                         Gagal login
                       </div>
                     @endif
-                    <form action="{{url('login')}}" method="post">
+                    <form action="{{url('petugas/login')}}" method="post">
                         @csrf
                         <div class="mb-3">
                             <input type="text" id="username" name="username" class="form-control py-2" placeholder="Username">

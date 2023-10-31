@@ -28,7 +28,7 @@ class masyarakatcontroller extends Controller
         ]);
         $aziz->create($request->all());
         if ($aziz->where('nik',$request->input('nik'))->where('username',$request->input('username'))->exists()){
-            return redirect('dasbor')->with('pesan','login berhasil');
+            return redirect('/')->with('pesan','registrasi berhasil');
         }
         return back()->with('pesan','registrasi gagal kakak');
     }
@@ -48,8 +48,8 @@ class masyarakatcontroller extends Controller
 
     }
     public function laporan(){
-        $p = new Masyarakat();
-        return view('masyarakat.laporan',['data'=>$p->all()]);
+        $aziz = new Masyarakat();
+        return view('masyarakat.laporan',['data'=>$aziz->all()]);
     }
 
     public function pengaduan(){
@@ -57,13 +57,13 @@ class masyarakatcontroller extends Controller
     }
 
     public function cekpengaduan(Request $request){
-        $cek = $request->validate([
-            'nik'=> 'required| max:16',
-            'tgl_pengaduan'=> 'required|date',
-            'foto'=> 'required',
-            'isi_laporan'=>'required',
-            'status'=>'0'
-        ]);
+        // $cek = $request->validate([
+        //     'nik'=> 'required| max:16',
+        //     'tgl_pengaduan'=> 'required|date',
+        //     'foto'=> 'required',
+        //     'isi_laporan'=>'required',
+        //     'status'=>'0'
+        // ]);
        // siapkan variabel untuk menampung file
        $foto = $request->file('foto');
        // tetntukan path file akan di simpan
@@ -72,9 +72,15 @@ class masyarakatcontroller extends Controller
        $foto->move($folder, $foto->getClientOriginalName());
 
         $aziz = new pengaduan();
-        $aziz->create($request->all());
+        $aziz->create([
+            'tgl_pengaduan'=>date("y/m/d"),
+            'nik'=>$request->nik,
+            'isi_laporan'=>$request->isi_laporan,
+            'foto'=> $foto->getClientOriginalName(),
+            'status'=>'0'
+        ]);
        
-       return redirect('dasbor')->with('pesan','pengaduan berhasil di kirim');
+       return redirect('/')->with('pesan','pengaduan berhasil di kirim');
        
     }
 

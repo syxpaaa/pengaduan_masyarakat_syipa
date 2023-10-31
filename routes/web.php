@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\masyarakatcontroller;
 use App\Http\Controllers\PetugasController;
 use App\Http\Middleware\validasiMasyarakat;
@@ -35,13 +36,13 @@ Route::get('logot',[masyarakatcontroller::class,'logout']);
 
 
 //data petugas
-Route::get('petugas',[PetugasController::class,'index']);
-Route::get('home',[PetugasController::class,'home']);
-Route::get('validasi',[PetugasController::class,'validasi']);
-Route::post('validasi',[PetugasController::class,'cekvalidasi']);
+Route::get('petugas',[AdminController::class,'index']);
+//Route::get('home',[PetugasController::class,'home']);
+Route::get('validasi',[AdminController::class,'validasi']);
+Route::post('validasi',[AdminController::class,'cekvalidasi']);
 
 //admin
-Route::get('admin',[PetugasController::class,'admin']);
-Route::post('.login',[PetugasController::class,'ceklogin']);
-Route::get('register',[PetugasController::class,'register']);
-Route::post('simpen',[PetugasController::class,'simpen']);
+Route::get('petugas/login',[AdminController::class,'login']);
+Route::post('petugas/login',[AdminController::class,'ceklogin']);
+Route::get('register',[AdminController::class,'register']);
+Route::post('register',[AdminController::class,'simpen']);
