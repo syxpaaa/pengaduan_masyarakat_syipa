@@ -25,13 +25,13 @@
                 <a class="nav-link" href="{{url('laporan')}}">Laporan</a>
               </li>
             </ul>
-@if (session('username'))    
-<a href="{{url('logot')}}" class="btn btn-light ">Keluar</a>
-@else
-<a href="{{url('login')}}" class="btn btn-light mx-2">Masuk</a>
-<a href="{{url('registrasi')}}" class="btn btn-light">Daftar</a>
+            @if (session('username'))    
+              <a href="{{url('logot')}}" class="btn btn-light ">Keluar</a>
+            @else
+              <a href="{{url('login')}}" class="btn btn-light mx-2">Masuk</a>
+              <a href="{{url('registrasi')}}" class="btn btn-light">Daftar</a>
     
-@endif
+            @endif
           </div>
         </div>
       </nav>

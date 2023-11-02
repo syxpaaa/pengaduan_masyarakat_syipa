@@ -20,7 +20,7 @@
             <td>{{$aziz->isi_laporan}}</td>
             <td>{{$aziz->tgl_pengaduan}}</td>
             <td>                                   
-                <a href="{{url('tanggapan')}}" class="btn btn-primary">
+                <a href="{{url('status/'.$aziz->id_pengaduan)}}" class="btn btn-primary">
                 <i class="bi bi-plus-circle-fill"></i> Tanggapi
                 </a>
             </td>

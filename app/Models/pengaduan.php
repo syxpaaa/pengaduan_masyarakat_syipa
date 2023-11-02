@@ -9,7 +9,7 @@ class pengaduan extends Model
 {
     use HasFactory;
     protected $table='pengaduan';
-    protected $primaryKey = 'nik';
+    protected $primaryKey = 'id_pengaduan';
     public $incrementing = false;
    
     protected $keyType = 'string';

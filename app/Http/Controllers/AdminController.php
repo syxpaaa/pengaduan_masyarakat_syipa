@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\pengaduan;
 use App\Models\petugas;
+use App\Models\tanggapan;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -17,15 +18,9 @@ class AdminController extends Controller
         $aziz = new pengaduan();
         return view('admin.validasi',['data'=>$aziz->all()]);
     }
-    public function cekValidasi(Request $request){
+    public function status($id){
         $aziz = new Pengaduan();
-        $cek = $request->validate([
-            'nik'=>'required|max:16',
-            'foto'=>'unique',
-            'isi_laporan'=>'required|min:10',
-            'tgl_pengaduan'=>'unique'
-        ]);
-        $aziz->create($request->all());
+        $aziz->find($id)->update(['status'=> 'proses']);
         return back()->with('pesan','validasi berhasil');
     }
     
@@ -35,11 +30,9 @@ class AdminController extends Controller
 
     public function ceklogin(Request $request){
         $p = new petugas();
-       
- 
         if($p->where('username',$request->input('username'))->where('password',$request->input('password')) ->exists()){
-         session(['username'=>$request->input('username'),'password'=>$request->input('password')
-        ]);
+         $petugas = $p->first();
+            session(['petugas'=>$petugas]);
          return redirect('petugas');
         }
         return back()->with('pesan','username dan password belum terdaftar kakak');
@@ -65,7 +58,16 @@ class AdminController extends Controller
         return back()->with('pesan','registrasi gagal kakak');
     }
 
-    public function logout(){
+    public function Tanggapan(){
+        $aziz = new tanggapan();
+        return view('admin.tanggapan',['data'=>$aziz->all()]);
+    }
+
+    public function simpenken(Request $request){
+        
+    }
+
+    public function keluar(){
         session()->flush();
         return back();
     }

@@ -33,7 +33,7 @@
               <a class="nav-link active" aria-current="page" href="{{url('tanggapan')}}">Tanggapan</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href=""></a>
+            <a class="nav-link active" aria-current="page" href="{{url('register')}}">registrasi</a>
         </li>
           </ul>
         </div>
@@ -42,17 +42,7 @@
             <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
               <input type="search" class="form-control form-control-dark text-bg-light" placeholder="Search..." aria-label="Search">
             </form>
-            <div class="text-end">
-                
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a href="/admin/logout" class="btn btn-danger">
-                            Sign Out
-                            <i class="bi bi-box-arrow-right"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            <a href="{{url('keluar')}}" class="btn btn-light mx-2 ">Keluar</a>
           </div>
         </div>
   </nav>
