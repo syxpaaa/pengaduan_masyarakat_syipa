@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
 <body>
-    <div id="main" class="d-flex align-items-center vh-100">
+    <div id="main" class="d-flex align-items-center vh-100" style="background-color: #bbc0fc;">
         <div class="container">
             <div class="card shadow m-auto" style="width: 400px;">
                 <div class="card-body">

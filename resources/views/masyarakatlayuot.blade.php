@@ -8,7 +8,7 @@
     @yield('scc')
 </head>
 <body class="bg-body-secondary">
-    <nav class="navbar navbar-expand-lg bg-info" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" style="background-color: #bbc0fc;">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

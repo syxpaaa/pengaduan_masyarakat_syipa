@@ -18,7 +18,7 @@
             <div class="mb-3 row">
                 <label for="" class="col-form-label col-2">NIK</label>
                 <div class="col-10">
-                    <input type="number" class="form-control" name="nik" id="nik" placeholder="NIK">
+                    <input type="number" class="form-control" name="nik" id="nik">
                     @error('nik')
                         <div class="form-text">
                             {{$message}}
@@ -33,9 +33,9 @@
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="" class="col-form-label col-2">Isi Laporan</label>
+                <label for="" class="col-form-label col-2">Tanggapan</label>
                 <div class="col-10">
-                    <input type="text" class="form-control" name="isi_laporan">
+                    <input type="text" class="form-control" name="tanggapan">
                 </div>
             </div>
             <div class="d-grid gap-2 col-6 mx-auto">

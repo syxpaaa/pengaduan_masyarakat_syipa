@@ -45,7 +45,7 @@ Route::get('status/{id}',[AdminController::class,'status']);
 Route::get('keluar',[AdminController::class,'keluar']);
 
 //admin
-Route::get('Tanggapan',[AdminController::class,'Tanggapan'])->middleware(ValidasiAdmin::class);
+Route::get('tanggapan',[AdminController::class,'tanggapan'])->middleware(ValidasiAdmin::class);
 Route::post('tanggapan',[AdminController::class,'simpenken']);
 Route::get('petugas/login',[AdminController::class,'login']);
 Route::post('petugas/login',[AdminController::class,'ceklogin']);
