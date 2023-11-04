@@ -73,8 +73,8 @@
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <button class="btn form-control btn-info mb-2">Registrasi</button>
-                            <button class="btn form-control btn-outline-success mb-2" type="reset">Batal</button>
+                            <button class="btn form-control btn-outline-light mb-2" style="background-color: #bbc0fc;">registrasi</button>
+                            <button class="btn form-control btn-outline-light mb-2" type="reset" style="background-color: #bbc0fc;">Batal</button>
                         </div>
                     </form>
                 </div>

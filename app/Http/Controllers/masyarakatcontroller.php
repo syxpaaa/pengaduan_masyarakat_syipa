@@ -47,10 +47,7 @@ class masyarakatcontroller extends Controller
         return back()->with('pesan','username dan password belum terdaftar kakak');
 
     }
-    public function laporan(){
-        $aziz = new Masyarakat();
-        return view('masyarakat.laporan',['data'=>$aziz->all()]);
-    }
+   
 
     public function pengaduan(){
         return view('masyarakat.pengaduan');

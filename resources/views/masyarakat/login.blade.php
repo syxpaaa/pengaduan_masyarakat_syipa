@@ -39,7 +39,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
-                            <input type="text" class="form-control" name="password" id="password" placeholder="Password">
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Password">
                             @error('password')
                                 <div class="form-text">
                                     {{$message}}
@@ -47,8 +47,8 @@
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <button class="btn form-control btn-primary mb-2">Login</button>
-                            <button class="btn form-control btn-outline-success mb-2" type="reset">Batal</button>
+                            <button class="btn form-control btn-outline-light mb-2" style="background-color: #bbc0fc;">Login</button>
+                            <button class="btn form-control btn-outline-light mb-2" type="reset" style="background-color: #bbc0fc;">Batal</button>
                         </div>
                     </form>
                 </div>

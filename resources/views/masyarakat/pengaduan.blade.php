@@ -21,7 +21,7 @@
 
                 <form action="{{url('pengaduan')}}" method="post" enctype="multipart/form-data">
                     @csrf
-                    <div class="mb-3">
+                    <div class="mb-3 row">
                         <label for="tgl_pengaduan" class="form-label">Tanggal pengaduan</label>
                         <input type="date" class="form-control" name="tgl_pengaduan" id="tgl_pengaduan
                         " placeholder="Tanggal pengaduan">
@@ -60,8 +60,8 @@
                     </div>
                     
                     <div class="mb-3">
-                        <button class="btn form-control btn-outline-info mb-2" type="submit">kirim</button>
-                        <button class="btn form-control btn-outline-success mb-2" type="reset">Batal</button>
+                        <button class="btn form-control btn-outline-light mb-2" style="background-color: #bbc0fc;">kirim</button>
+                        <button class="btn form-control btn-outline-light mb-2" type="reset" style="background-color: #bbc0fc;">Batal</button>
                     </div>
                 </form>
             </div>

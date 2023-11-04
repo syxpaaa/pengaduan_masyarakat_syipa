@@ -21,9 +21,6 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{url('pengaduan')}}">Pengaduan</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{url('laporan')}}">Laporan</a>
-              </li>
             </ul>
             @if (session('username'))    
               <a href="{{url('logot')}}" class="btn btn-light ">Keluar</a>
